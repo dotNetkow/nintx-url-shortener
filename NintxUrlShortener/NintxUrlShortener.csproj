@@ -308,6 +308,12 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NintxUrlShortener.UrlProcessing\NintxUrlShortener.UrlProcessing.csproj">
+      <Project>{af4a625f-84ab-469c-9c77-431cfb24c675}</Project>
+      <Name>NintxUrlShortener.UrlProcessing</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

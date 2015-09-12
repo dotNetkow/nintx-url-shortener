@@ -1,0 +1,5 @@
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.UrlProcessing\bin\Debug\NintxUrlShortener.UrlProcessing.dll
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.UrlProcessing\bin\Debug\NintxUrlShortener.UrlProcessing.pdb
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.UrlProcessing\obj\Debug\NintxUrlShortener.UrlProcessing.csprojResolveAssemblyReference.cache
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.UrlProcessing\obj\Debug\NintxUrlShortener.UrlProcessing.dll
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.UrlProcessing\obj\Debug\NintxUrlShortener.UrlProcessing.pdb
