@@ -8,6 +8,7 @@ ASP.NET MVC 4 web application with Windows Azure for the database backend.
 TODO
 
 ## Enhancement List
-* Dependency injection for URL backend (result: better unit tests for MVC controllers)
+* Logging
+* Dependency injection for URL backend (result: decoupled unit tests for MVC controllers)
 * Create database scripts
 * Add user accounts

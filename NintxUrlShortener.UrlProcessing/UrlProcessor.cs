@@ -14,7 +14,7 @@ namespace NintxUrlShortener.UrlProcessing
     public class UrlProcessor
     {
         public static readonly string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        public static readonly int Base = Alphabet.Length;  // 62 (aka total letters in Alphabet
+        public static readonly int Base = Alphabet.Length;  // 62 (aka total letters in Alphabet)
 
         /// <summary>
         /// Convert a base 10 id number into a base 62 encoded string.

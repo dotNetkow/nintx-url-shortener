@@ -57,7 +57,7 @@ namespace NintxUrlShortener.Tests.Controllers
         {
             HomeController controller = new HomeController();
 
-            RedirectResult result = controller.Index("B", string.Empty) as RedirectResult;
+            RedirectResult result = controller.Index("N", string.Empty) as RedirectResult;
 
             Assert.AreEqual("https://news.ycombinator.com/news", result.Url);
         }
