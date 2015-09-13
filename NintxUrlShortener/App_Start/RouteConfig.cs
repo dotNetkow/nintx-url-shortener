@@ -13,9 +13,17 @@ namespace NintxUrlShortener
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{linkid}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+
+            routes.MapRoute(
+                name: "Empty",
+                url: "",  // url with no parameters
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }

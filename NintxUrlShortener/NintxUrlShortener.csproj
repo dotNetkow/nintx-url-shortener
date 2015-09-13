@@ -187,6 +187,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UrlModel.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -301,6 +302,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\UrlAdded.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -309,6 +311,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NintxUrlShortener.Database\NintxUrlShortener.Storage.csproj">
+      <Project>{c7e3896d-008a-4238-93d8-71728fc5f042}</Project>
+      <Name>NintxUrlShortener.Storage</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NintxUrlShortener.UrlProcessing\NintxUrlShortener.UrlProcessing.csproj">
       <Project>{af4a625f-84ab-469c-9c77-431cfb24c675}</Project>
       <Name>NintxUrlShortener.UrlProcessing</Name>

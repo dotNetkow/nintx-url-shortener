@@ -80,3 +80,7 @@ C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\bin\Debug\zh-Hant\Syst
 C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\obj\Debug\NintxUrlShortener.Tests.csprojResolveAssemblyReference.cache
 C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\obj\Debug\NintxUrlShortener.Tests.dll
 C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\obj\Debug\NintxUrlShortener.Tests.pdb
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\bin\Debug\NintxUrlShortener.Database.dll
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\bin\Debug\NintxUrlShortener.UrlProcessing.dll
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\bin\Debug\NintxUrlShortener.Database.pdb
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener.Tests\bin\Debug\NintxUrlShortener.UrlProcessing.pdb

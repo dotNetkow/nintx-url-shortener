@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintxUrlShortener.UrlProces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintxUrlShortener.UrlProcessing.Test", "NintxUrlShortener.UrlProcessing.Test\NintxUrlShortener.UrlProcessing.Test.csproj", "{7BD1104B-A624-4D6E-953D-4A3E6E0F55F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintxUrlShortener.Storage", "NintxUrlShortener.Database\NintxUrlShortener.Storage.csproj", "{C7E3896D-008A-4238-93D8-71728FC5F042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7BD1104B-A624-4D6E-953D-4A3E6E0F55F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BD1104B-A624-4D6E-953D-4A3E6E0F55F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BD1104B-A624-4D6E-953D-4A3E6E0F55F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E3896D-008A-4238-93D8-71728FC5F042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E3896D-008A-4238-93D8-71728FC5F042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E3896D-008A-4238-93D8-71728FC5F042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E3896D-008A-4238-93D8-71728FC5F042}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

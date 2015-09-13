@@ -86,3 +86,5 @@ C:\sourcecode\nintx-url-shortener\NintxUrlShortener\bin\zh-Hant\System.Spatial.r
 C:\sourcecode\nintx-url-shortener\NintxUrlShortener\obj\Debug\NintxUrlShortener.csprojResolveAssemblyReference.cache
 C:\sourcecode\nintx-url-shortener\NintxUrlShortener\obj\Debug\NintxUrlShortener.dll
 C:\sourcecode\nintx-url-shortener\NintxUrlShortener\obj\Debug\NintxUrlShortener.pdb
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener\bin\NintxUrlShortener.Database.dll
+C:\sourcecode\nintx-url-shortener\NintxUrlShortener\bin\NintxUrlShortener.Database.pdb
