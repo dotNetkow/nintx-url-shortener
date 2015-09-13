@@ -18,9 +18,8 @@ namespace NintxUrlShortener.Controllers
         /// Allow user to submit URL to be shortened or 
         /// redirect user to long form URL if found.
         /// </summary>
-        /// <param name="linkId"></param>
-        /// <param name="longUrl"></param>
-        /// <returns></returns>
+        /// <param name="linkId">shortened URL code</param>
+        /// <param name="longUrl">original URL submitted by user</param>
         public ActionResult Index(string linkId, string longUrl)
         {
             if (!string.IsNullOrEmpty(longUrl))
