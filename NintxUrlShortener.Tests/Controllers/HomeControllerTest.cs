@@ -13,18 +13,63 @@ namespace NintxUrlShortener.Tests.Controllers
     public class HomeControllerTest
     {
         [TestMethod]
-        public void Index()
+        public void Index_NoParameters()
         {
-            // Arrange
-            //HomeController controller = new HomeController();
+            HomeController controller = new HomeController();
 
-            //// Act
-            //ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = controller.Index(string.Empty, string.Empty) as ViewResult;
 
-            //// Assert
-            //Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", result.ViewBag.Message);
+            Assert.AreEqual(null, result.ViewBag.ErrorInvalidUrl);
         }
 
-      
+        [TestMethod]
+        public void Index_InvalidUrl()
+        {
+            HomeController controller = new HomeController();
+
+            ViewResult result = controller.Index(string.Empty, "::") as ViewResult;
+
+            Assert.AreEqual("Invalid URL! Please submit a different one.", result.ViewBag.ErrorInvalidUrl);
+        }
+
+        [TestMethod]
+        public void Index_InvalidUrl_LocalPath()
+        {
+            HomeController controller = new HomeController();
+
+            ViewResult result = controller.Index(string.Empty, "c:\test") as ViewResult;
+
+            Assert.AreEqual("Invalid URL! Please submit a different one.", result.ViewBag.ErrorInvalidUrl);
+        }
+
+        [TestMethod]
+        public void Index_ValidUrlSubmitted()
+        {
+            HomeController controller = new HomeController();
+
+            ViewResult result = controller.Index(string.Empty, "http://www.test.com") as ViewResult;
+
+            Assert.AreEqual("UrlAdded", result.ViewName);
+        }
+
+        [TestMethod]
+        public void Index_ValidShortUrl()
+        {
+            HomeController controller = new HomeController();
+
+            RedirectResult result = controller.Index("B", string.Empty) as RedirectResult;
+
+            Assert.AreEqual("https://news.ycombinator.com/news", result.Url);
+        }
+
+        [TestMethod]
+        public void Index_InvalidShortUrl()
+        {
+            HomeController controller = new HomeController();
+
+            ViewResult result = controller.Index("BYCCX", string.Empty) as ViewResult;
+
+            Assert.AreEqual("Shortened URL not found. Please shorten another!", result.ViewBag.ErrorInvalidShortCode);
+        }
     }
 }

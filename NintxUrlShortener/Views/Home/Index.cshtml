@@ -13,6 +13,11 @@
         </div>
     </section>
 }
+
+<p style="color:red">
+    <h3>@ViewBag.ErrorInvalidShortCode</h3>
+</p>
+
 <h3>Your URL to shorten:</h3>
 
 @using (Html.BeginForm("SubmitUrl", "Account"))
@@ -21,6 +26,6 @@
     <input type="submit" value="Shorten" />
 }  
 
-<ol class="round">
-    
-</ol>
+<p style="color:red">
+    <h3>@ViewBag.ErrorInvalidUrl</h3>
+</p>

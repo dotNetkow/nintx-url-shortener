@@ -10,6 +10,14 @@ namespace NintxUrlShortener.Storage
 {
     public class UrlManager
     {
+        /// <summary>
+        /// Add a new entry to the Urls table.
+        /// 
+        /// Inserts the long form url, retrieves the ID of the new row, and encodes that number 
+        /// as the link value to give to User.
+        /// </summary>
+        /// <param name="longUrl">long form url submitted by User</param>
+        /// <returns>shortened url link code</returns>
         public static string InsertUrl(string longUrl) {
 
             int foundId;
@@ -62,7 +70,8 @@ namespace NintxUrlShortener.Storage
             string originalUrl = "";
 
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
-            using (SqlCommand identityCommand = new SqlCommand("SELECT OrigUrl FROM Urls WHERE EncodedUrl = @EncodedUrl", connection))
+            // NOTE: Need 'COLLATE SQL_Latin1_General_CP1_CS_AS' for searching to be case sensitive! Otherwise 'aBc' is same as 'AbC'
+            using (SqlCommand identityCommand = new SqlCommand("SELECT OrigUrl FROM Urls WHERE EncodedUrl = @EncodedUrl COLLATE SQL_Latin1_General_CP1_CS_AS", connection))
             {
                 connection.Open();
 
@@ -71,7 +80,7 @@ namespace NintxUrlShortener.Storage
                 SqlDataReader reader = identityCommand.ExecuteReader();
                 reader.Read();
 
-                if (reader[0] != null)
+                if (reader.HasRows)
                 {
                     originalUrl = reader[0].ToString();
                 }
