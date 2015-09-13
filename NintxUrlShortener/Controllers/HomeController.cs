@@ -12,13 +12,13 @@ namespace NintxUrlShortener.Controllers
 {
     public class HomeController : Controller
     {
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
         public ActionResult Index(string linkId, string longUrl)
         {
+            if (!string.IsNullOrEmpty(longUrl))
+            {
+                return SubmitUrl(longUrl);
+            }
+
             if (string.IsNullOrEmpty(linkId))
             {
                 return View();
@@ -35,16 +35,17 @@ namespace NintxUrlShortener.Controllers
 
         }
 
-        //[HttpPost]
-        //public ActionResult SubmitUrl(string longUrl)
-        //{
-        //    string encodedUrl = UrlManager.InsertUrl(longUrl);
+        [HttpPost]
+        public ActionResult SubmitUrl(string longUrl)
+        {
+            string encodedUrl = UrlManager.InsertUrl(longUrl);
 
-        //    UrlModel model = new UrlModel() {
-        //        ShortenedUrl = encodedUrl
-        //    };
-            
-        //    return View("UrlAdded", model);
-        //}
+            UrlModel model = new UrlModel()
+            {
+                ShortenedUrl = encodedUrl
+            };
+
+            return View("UrlAdded", model);
+        }
     }
 }

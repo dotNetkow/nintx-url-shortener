@@ -66,6 +66,8 @@ namespace NintxUrlShortener.Storage
             {
                 connection.Open();
 
+                identityCommand.Parameters.AddWithValue("@EncodedUrl", encodedId);
+
                 SqlDataReader reader = identityCommand.ExecuteReader();
                 reader.Read();
 
